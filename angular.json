@@ -27,12 +27,12 @@
               "src/favicon.ico",
               "src/assets"
             ],
-            "styles": [ 
-              "src/styles.scss", 
-              "./node_modules/bootstrap/dist/css/bootstrap.min.css" 
-            ], 
-            "scripts": [ 
-              "./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js" 
+            "styles": [
+              "src/styles.scss",
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css"
+            ],
+            "scripts": [
+              "./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
             ]
           },
           "configurations": {
@@ -103,11 +103,23 @@
             ],
             "scripts": []
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
+          }
         }
       }
     }
   },
   "cli": {
-    "analytics": "fc8eb002-f42b-4c83-892c-ca6fba5cef22"
+    "analytics": "fc8eb002-f42b-4c83-892c-ca6fba5cef22",
+    "schematicCollections": [
+      "@angular-eslint/schematics"
+    ]
   }
 }

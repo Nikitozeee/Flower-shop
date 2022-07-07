@@ -1,8 +1,21 @@
-<p>catalog works!</p>
-<div class="card" style="width: 18rem;" *ngFor="let product of products">
-    
-    <div>{{product.id}}</div>
-    <div>{{product.name}}</div>
-    <div>{{product.price}}</div>
-    <div>{{product.img}}</div>      
+<div class="container">
+  <div class="row g-2">
+    <div
+      class="col-3 border text-center text-black bg-light mb-3 border-dark"
+      *ngFor="let product of products"
+    >
+      <img
+        class="img-thumbnail rounded-circle "
+        alt="Здесь должна быть картинка"
+        [src]="product.img"
+      />
+      <p class="border border-dark">ID: {{ product.id }}</p>
+      <div class="card-header border border-dark">{{ product.name }}</div>
+      <div class="card-body">
+        <div class="card-text border border-dark">Цена = {{ product.price }}</div>
+      </div>
+      <button type="button" class="btn btn-secondary" style="width: 300px;">Buy</button>
+      <p></p>
+    </div>
+  </div>
 </div>
